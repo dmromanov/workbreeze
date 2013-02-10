@@ -82,8 +82,6 @@ class MHome extends PageModule {
 		<li><a href="http://github.com/silentroach/workbreeze/commit/#githash">github</a></li>
 		<li><a href="http://twitter.com/workbreeze">twitter</a></li>
 		<li><a href="http://www.facebook.com/pages/workbreezecom/103214773075102">facebook</a></li>
-		<li><a href="http://vk.com/club19804722">vk</a></li>
-		<li><a href="http://digg.com/news/business/workbreeze">digg</a></li>
 		<li><a href="mailto:workbreeze@gmail.com">e-mail</a></li>
 	</ul>
 
