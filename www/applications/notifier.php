@@ -34,13 +34,11 @@ class WorkbreezeNotifier extends AppInstance {
 	public function onReady() {
 		$appInstance = $this;
 
-		if ($this->WS = Daemon::$appResolver->getInstanceByAppName('WebSocketServer')) {
-			$this->WS->addRoute('WorkbreezeNotifier',
-				function ($client) use ($appInstance) {
-					return new WorkbreezeWebSocketSession($client, $appInstance);
-				}
-			);
-		}
+		WebSocketServer::getInstance()->addRoute('WorkbreezeNotifier',
+			function ($client) use ($appInstance) {
+				return new WorkbreezeWebSocketSession($client, $appInstance);
+			}
+		);
 	}
 
 	public function getLastStamp() {
