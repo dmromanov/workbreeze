@@ -8,10 +8,17 @@
 class Cache {
 
 	public static function set($key, $value, $ttl = 60) {
+		if (function_exists('apc_store') === false) {
+			return false;
+		}
 		apc_store($key, $value, $ttl);
 	}
 
 	public static function get($key) {
+		if (function_exists('apc_fetch') === false) {
+			return false;
+		}
+
 		$success = false;
 
 		$val = apc_fetch($key, $success);
