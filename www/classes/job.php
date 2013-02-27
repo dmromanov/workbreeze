@@ -212,7 +212,7 @@ class Job {
 		}
 		
 		if (0 == count($cats))	{
-			echo '[' . date('H:m:s') . '] Can\'t found category for: ' . $tmp . "\n";
+			echo '[' . date('H:m:s') . '] Can\'t find category for: ' . $tmp . "\n";
 			$cats[] = self::CAT_OTHER;
 		}
 		
